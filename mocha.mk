@@ -21,6 +21,18 @@ TARGET_SCREEN_WIDTH := 1536
 #PRODUCT_COPY_FILES += \
 #    $(LOCAL_KERNEL):kernel
 
+#kernel
+LOCAL_PATH := device/xiaomi/common-kernel
+
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+        LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+else
+        LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel
+
 $(call inherit-product,  $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Ramdisk
