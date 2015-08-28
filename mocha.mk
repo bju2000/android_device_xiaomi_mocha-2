@@ -6,6 +6,9 @@ DEVICE_PACKAGE_OVERLAYS += device/xiaomi/mocha/overlay
 
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
+PRODUCT_PREBUILT_WEBVIEWCHROMIUM := true
+
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG += normal hdpi xhdpi xxhdpi
 TARGET_SCREEN_HEIGHT := 2048

@@ -34,3 +34,54 @@ BOARD_KERNEL_SEPARATED_DT := true
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
+
+BOARD_SEPOLICY_DIRS += device/xiaomi/mocha/sepolicy
+BOARD_SEPOLICY_UNION += \
+	te_macros \
+	agpsd.te \
+	app.te \
+	bluetooth.te \
+	bootanim.te \
+	cvc.te \
+	device.te \
+	domain.te \
+	drmserver.te \
+	fild.te \
+	file_contexts \
+	file.te \
+	genfs_contexts \
+	gpload.te \
+	gpsd.te \
+	healthd.te\
+	hostapd.te \
+	icera-crashlogs.te \
+	icera-feedback.te \
+	icera-loader.te \
+	icera-switcherd.te \
+	init.te \
+	installd.te \
+	mediaserver.te \
+	mock_modem.te \
+	netd.te \
+	platform_app.te \
+	property_contexts \
+	property.te \
+	raydium.te \
+	recovery.te \
+	service.te \
+	service_contexts \
+	set_hwui.te \
+	shell.te \
+	surfaceflinger.te \
+	system_app.te \
+	system_server.te \
+	tee.te \
+	ueventd.te \
+	untrusted_app.te \
+	usb.te \
+	ussrd.te \
+	ussr_setup.te \
+	vold.te \
+	wifi_loader.te \
+	wpa.te \
+	zygote.te
