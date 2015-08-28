@@ -70,7 +70,7 @@ TW_EXTERNAL_STORAGE_PATH := "/sdcard"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 #RECOVERY_TOUCHSCREEN_FLIP_Y := true
 #RECOVERY_TOUCHSCREEN_FLIP_X := true
-TARGET_PREBUILT_RECOVERY_KERNEL := device/xiaomi/mocha/kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/xiaomi/mocha/common-kernel/kernel
 BOARD_MKRECOVERYIMG_ARGS := --dt device/xiaomi/mocha/dt.img
 PRODUCT_COPY_FILES += device/xiaomi/mocha/twrp.fstab:recovery/root/etc/twrp.fstab \
 		      device/xiaomi/mocha/rootdir/etc/init:recovery/root/init \
