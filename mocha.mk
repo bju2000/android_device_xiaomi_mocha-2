@@ -116,7 +116,12 @@ PRODUCT_PACKAGES += \
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bdaddr:system/etc/bluetooth/bdaddr \
-    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf	
+    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+
+# Camera
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/camera/nvcamera.conf:system/etc/nvcamera.conf \
+    $(LOCAL_PATH)/camera/model_frontal.xml:system/etc/model_frontal.xml	
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=1417730315
 PRODUCT_NAME := full_mocha
