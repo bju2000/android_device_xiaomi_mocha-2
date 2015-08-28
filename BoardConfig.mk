@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
-include device/xiaomi/mocha-common/BoardConfigCommon.mk
+include device/xiaomi/mocha/BoardConfigCommon.mk
 
 DEVICE_RESOLUTION := 1536x2048
 
@@ -28,8 +28,8 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 671088640
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 13742637056
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/xiaomi/mocha-common/kernel
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --dt device/xiaomi/mocha-common/dt.img --tags_offset 0x00000100
+TARGET_PREBUILT_KERNEL := device/xiaomi/mocha/kernel
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --dt device/xiaomi/mocha/dt.img --tags_offset 0x00000100
 BOARD_KERNEL_SEPARATED_DT := true
 
 BOARD_HAS_NO_SELECT_BUTTON := true
