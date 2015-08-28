@@ -36,7 +36,11 @@ PRODUCT_COPY_FILES += \
     device/xiaomi/mocha/rootdir/etc/init.rc:root/init.rc \
     device/xiaomi/mocha/rootdir/sbin/healthd:root/sbin/healthd \
     device/xiaomi/mocha/rootdir/sbin/chargeonlymode:root/sbin/chargeonlymode \
-    device/xiaomi/mocha/rootdir/sbin/mdbd:root/sbin/mdbd	
+    device/xiaomi/mocha/rootdir/sbin/mdbd:root/sbin/mdbd
+
+# Enable repeatable keys in CWM
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.cwm.enable_key_repeat=true	
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=1417730315
 PRODUCT_NAME := full_mocha
