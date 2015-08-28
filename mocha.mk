@@ -93,7 +93,25 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audioConfig_qvoice_icera_pc400.xml:system/etc/audioConfig_qvoice_icera_pc400.xml \
     $(LOCAL_PATH)/audio/nvaudio_conf.xml:system/etc/nvaudio_conf.xml \
-    $(LOCAL_PATH)/audio/nvaudio_fx.xml:system/etc/nvaudio_fx.xml	
+    $(LOCAL_PATH)/audio/nvaudio_fx.xml:system/etc/nvaudio_fx.xml
+
+ifeq ($(BOARD_USES_STOCK_POLICY),)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_policy_stock.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/audio/audio_policy.tegra.so:system/lib/hw/audio_policy.tegra.so
+else
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf
+endif
+
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    audio.usb.default \
+    libaudio-resampler \
+    tinycap \
+    tinymix \
+    tinyplay \
+    xaplay	
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=1417730315
 PRODUCT_NAME := full_mocha
