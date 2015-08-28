@@ -4,6 +4,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/xiaomi/mocha/overlay
 
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG += normal hdpi xhdpi xxhdpi
+TARGET_SCREEN_HEIGHT := 2048
+TARGET_SCREEN_WIDTH := 1536
+
 #LOCAL_PATH := device/xiaomi/mocha
 #ifeq ($(TARGET_PREBUILT_KERNEL),)
 #	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
