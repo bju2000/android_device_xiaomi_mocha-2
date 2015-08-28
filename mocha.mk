@@ -111,7 +111,12 @@ PRODUCT_PACKAGES += \
     tinycap \
     tinymix \
     tinyplay \
-    xaplay	
+    xaplay
+
+# Bluetooth
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bluetooth/bdaddr:system/etc/bluetooth/bdaddr \
+    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf	
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=1417730315
 PRODUCT_NAME := full_mocha
