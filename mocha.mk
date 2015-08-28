@@ -16,6 +16,7 @@ DEVICE_PACKAGE_OVERLAYS += device/xiaomi/mocha/overlay
 
 $(call inherit-product,  $(SRC_TARGET_DIR)/product/full_base.mk)
 
+# Ramdisk
 PRODUCT_PACKAGES += \
     init.none.rc \
     fstab.mocha \
@@ -28,7 +29,14 @@ PRODUCT_PACKAGES += \
     init.tlk.rc \
     init.nv_dev_board.usb.rc \
     power.mocha.rc \
-    ueventd.mocha.rc	
+    ueventd.mocha.rc
+
+PRODUCT_COPY_FILES += \
+    device/xiaomi/mocha/rootdir/etc/init:root/init \
+    device/xiaomi/mocha/rootdir/etc/init.rc:root/init.rc \
+    device/xiaomi/mocha/rootdir/sbin/healthd:root/sbin/healthd \
+    device/xiaomi/mocha/rootdir/sbin/chargeonlymode:root/sbin/chargeonlymode \
+    device/xiaomi/mocha/rootdir/sbin/mdbd:root/sbin/mdbd	
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=1417730315
 PRODUCT_NAME := full_mocha
