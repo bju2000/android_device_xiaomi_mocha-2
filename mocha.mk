@@ -66,7 +66,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/com.nvidia.nvsi.xml:system/etc/permissions/com.nvidia.nvsi.xml \
     $(LOCAL_PATH)/permissions/android.hardware.sensor.stepcounter.xml:system/etc/permissions/android.hardware.sensor.stepcounter.xml \
     $(LOCAL_PATH)/permissions/android.hardware.sensor.stepdetector.xml:system/etc/permissions/android.hardware.sensor.stepdetector.xml \
-    $(LOCAL_PATH)/permissions/com.nvidia.miracast.xml:system/etc/permissions/com.nvidia.miracast.xml	
+    $(LOCAL_PATH)/permissions/com.nvidia.miracast.xml:system/etc/permissions/com.nvidia.miracast.xml
+
+# idc
+PRODUCT_COPY_FILES += \
+  $(LOCAL_PATH)/idc/touch.idc:system/usr/idc/touch.idc \
+  $(LOCAL_PATH)/idc/touch_fusion.idc:system/usr/idc/touch_fusion.idc \
+  $(LOCAL_PATH)/idc/sensor00fn11.idc:system/usr/idc/sensor00fn11.idc	
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=1417730315
 PRODUCT_NAME := full_mocha
